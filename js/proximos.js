@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 function cargarDatos(){
   $.ajax({
-    url: "http://127.0.0.1:5500/datos/info.json"
+    url: "https://sergiopruebas13.github.io/Pagina_Ejemplo_1/datos/info.json"
           }).done(function(respuesta){
         
             fecha_Actual = Date.parse(respuesta.fechaActual);
