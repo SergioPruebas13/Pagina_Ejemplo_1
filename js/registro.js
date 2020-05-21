@@ -1,7 +1,7 @@
 function validar(formulario) {
 
 var nombre,email,contraseña,confirmar_contraseña,condiciones,Tipo_usuario,expresion;
-const pattern = new RegExp('^[A-Z]+$', 'i');
+//const pattern = new RegExp('^[A-Z]+$', 'i');
 expresion = /^\w+([\.-]?\w+)*@(?:|hotmail|gmail)\.(?:|com|es)+$/;
 let Error = true;
 
@@ -22,12 +22,7 @@ condiciones = document.getElementById("acepto").checked;
         if(nombre.length > 35) {
           document.getElementById("errornombres").innerHTML= "Error, El campo nombre no debe superar 35 Caracteres";
           Error = false;
-        } else {
-          if(!pattern.test(nombre)){ 
-            document.getElementById("errornombres").innerHTML= "Error, El campo nombre no acepta numeros";
-            Error = false;
-          } 
-        }
+        } 
     } 
 
     if (email === ""){// validacion Email
@@ -77,6 +72,33 @@ function Limpiar_Errores(){
       for (var i = 0; i < errores.length; i++) {
           errores[i].innerHTML = "";        
       }
+}
+
+function soloLetras(e) {//validacion Solo Letras 
+  key = e.keyCode || e.which;
+  tecla = String.fromCharCode(key).toLowerCase();
+  letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+  especiales = [8, 37, 39, 46];
+
+  tecla_especial = false
+  for(var i in especiales) {
+      if(key == especiales[i]) {
+          tecla_especial = true;
+          break;
+      }
+  }
+
+  if(letras.indexOf(tecla) == -1 && !tecla_especial)
+      return false;
+}
+
+function limpia() {
+  var val = document.getElementById("nombres").value;
+  var tam = val.length;
+  for(i = 0; i < tam; i++) {
+      if(!isNaN(val[i]))
+          document.getElementById("nombres").value = '';
+  }
 }
 
 
