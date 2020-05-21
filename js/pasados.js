@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 function cargarDatos(){
   $.ajax({
-    url: "http://127.0.0.1:5500/datos/info.json"
+    url: "https://sergiopruebas13.github.io/Ejemplo_Prueba_2/Datos/datos.json"
           }).done(function(respuesta){
         
             fecha_Actual = Date.parse(respuesta.fechaActual);
@@ -72,7 +72,7 @@ function Cargar_Eventos_Pasasdos(){
            var elementt = document.getElementById('pasados_all');
             //var elementt = $("#proximos");
             elementt.innerHTML += `<div id="Caja_All"> 
-            <p> <a href="/detalle.html?id=${id_E}" class="nombre">${eventos_pasados[i].nombre_}</a><br>
+            <p> <a href="/Pagina_Ejemplo_1/detalle.html?id=${id_E}" class="nombre">${eventos_pasados[i].nombre_}</a><br>
             <span class="fecha">${Fecha} - ${eventos_pasados[i].lugar_}</span><br>
             <span class="descripcion">${eventos_pasados[i].descripcion_}</span><br>
             <span class="Invitados">Invitados: ${eventos_pasados[i].invitados_} </span></p>
