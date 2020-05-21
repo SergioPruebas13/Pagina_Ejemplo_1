@@ -72,7 +72,7 @@ function Cargar_Eventos_Proximos(){
            var elementt = document.getElementById('proximos');
             //var elementt = $("#proximos");
             elementt.innerHTML += `<div id="Caja_Proximos"> 
-            <p> <a href="/detalle.html?id=${id_E}" class="nombre">${eventos_proximos[i].nombre_}</a> <br>
+            <p> <a href="/Pagina_Ejemplo_1/detalle.html?id=${id_E}" class="nombre">${eventos_proximos[i].nombre_}</a> <br>
             <span class="fecha">${Fecha}</span><br>
             <span class="descripcion">${eventos_proximos[i].descripcion_}</span></p>
                     </div>`;
@@ -106,7 +106,7 @@ function Cargar_Eventos_Pasasdos(){
            var elementt = document.getElementById('pasados');
             //var elementt = $("#proximos");
             elementt.innerHTML += `<div id="Caja_Proximos"> 
-            <p> <a href="/detalle.html?id=${id_E}" class="nombre">${eventos_pasados[i].nombre_}</a><br>
+            <p> <a href="/Pagina_Ejemplo_1/detalle.html?id=${id_E}" class="nombre">${eventos_pasados[i].nombre_}</a><br>
             <span class="fecha">${Fecha}</span><br>
             <span class="descripcion">${eventos_pasados[i].descripcion_}</span></p>
                     </div>`;
