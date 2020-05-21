@@ -70,7 +70,7 @@ function Cargar_Eventos_Proximos(){
            var elementt = document.getElementById('proximos_all');
             //var elementt = $("#proximos");
             elementt.innerHTML += `<div id="Caja_All"> 
-            <p> <a href="/detalle.html?id=${id_E}" class="nombre">${eventos_pasados[i].nombre_}</a><br>
+            <p> <a href="/Pagina_Ejemplo_1/detalle.html?id=${id_E}" class="nombre">${eventos_pasados[i].nombre_}</a><br>
             <span class="fecha">${Fecha} - ${eventos_pasados[i].lugar_}</span><br>
             <span class="descripcion">${eventos_pasados[i].descripcion_}</span><br>
             <span class="Costo">Costo: ${eventos_pasados[i].precio_} </span></p>
